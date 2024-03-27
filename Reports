@@ -1,0 +1,227 @@
+import * as React from "react";
+
+function IconImage({ src, alt, className }) {
+  return <img loading="lazy" src={src} alt={alt} className={className} />;
+}
+
+function ProfileButton() {
+  return (
+    <div className="flex gap-5 px-6 py-1.5 mt-8 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5">
+      <IconImage
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc1e3b18d6dd12913b3d92a22cfa2310da47095d006ff64ba1926c9fdf408516?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+        alt="Profile icon"
+        className="shrink-0 aspect-square w-[62px]"
+      />
+      <div className="flex-auto my-auto">Profile</div>
+    </div>
+  );
+}
+
+function ComplainButton() {
+  return (
+    <div className="flex gap-5 px-6 py-2.5 mt-16 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5 max-md:mt-10">
+      <IconImage
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc8e8ab5b0312bf6151b38417f45b63b3b228fc7629619ced294cbb832517bc5?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+        alt="Complain icon"
+        className="shrink-0 aspect-square w-[54px]"
+      />
+      <div className="flex-auto self-start mt-3.5">Complain</div>
+    </div>
+  );
+}
+
+function DailySetupButton() {
+  return (
+    <div className="flex gap-5 px-6 py-1 mt-16 bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5 max-md:mt-10">
+      <IconImage
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5dde3c531da91752f725d8b0b688f5da3d2e64d1a436defae41549e2c13799b?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+        alt="Daily setup icon"
+        className="shrink-0 w-10 aspect-[0.61]"
+      />
+      <div className="flex-auto self-start mt-5">Daily Setup</div>
+    </div>
+  );
+}
+
+function ReportsButton() {
+  return (
+    <div className="flex gap-5 px-5 py-1 mt-16 whitespace-nowrap bg-yellow-500 rounded-xl max-md:flex-wrap max-md:mt-10">
+      <IconImage
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e00bedfb7608267248896186020cacac83db228431de12704c3bdece7982ba9?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+        alt="Reports icon"
+        className="shrink-0 aspect-[0.7] w-[46px]"
+      />
+      <div className="flex-auto my-auto">Reports</div>
+    </div>
+  );
+}
+
+function LogoutButton() {
+  return (
+    <div className="flex gap-5 px-6 py-0.5 mt-36 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5 max-md:mt-10">
+      <IconImage
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbf43f9242e732872e2e826d339d4c76e890f845ed7d882a3d7fe8c057f0f01d?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+        alt="Logout icon"
+        className="shrink-0 aspect-[0.67] w-[46px]"
+      />
+      <div className="flex-auto my-auto">Logout</div>
+    </div>
+  );
+}
+
+function Sidebar() {
+  return (
+    <div className="flex flex-col w-[28%] max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col grow items-start pt-1.5 pb-16 pl-11 w-full text-4xl font-bold text-black bg-white max-md:mt-10 max-md:max-w-full">
+        <IconImage
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3fce8b780edd8c7a830e86cc37af23ab8bc1b0f47b815c15049585961d4786e1?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+          alt="Logo"
+          className="self-center max-w-full aspect-[0.47] w-[151px]"
+        />
+        <ProfileButton />
+        <ComplainButton />
+        <DailySetupButton />
+        <ReportsButton />
+        <LogoutButton />
+      </div>
+    </div>
+  );
+}
+
+function CallLogReport() {
+  return (
+    <div className="flex flex-col self-stretch px-9 pt-20 pb-3 my-auto w-full rounded-3xl bg-neutral-100 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+      <h1 className="self-center mt-6 text-7xl font-bold tracking-wide text-black max-md:max-w-full max-md:text-4xl">
+        Call Log Report
+      </h1>
+      <div className="flex gap-5 mt-28 text-6xl font-bold tracking-wide text-black whitespace-nowrap max-md:flex-wrap max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+        <div className="flex-auto self-start mt-5 max-md:text-4xl">Branch</div>
+        <div className="shrink-0 max-w-full rounded-xl bg-neutral-400 h-[114px] w-[754px]" />
+      </div>
+      <div className="mt-4 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div className="flex flex-col w-[48%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col mt-20 max-md:mt-10 max-md:max-w-full">
+              <div className="max-md:max-w-full">
+                <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+                  <div className="flex flex-col w-[43%] max-md:ml-0 max-md:w-full">
+                    <div className="self-stretch my-auto text-6xl font-bold tracking-wide text-black max-md:mt-10 max-md:text-4xl">
+                      Call Log Date
+                    </div>
+                  </div>
+                  <div className="flex flex-col ml-5 w-[57%] max-md:ml-0 max-md:w-full">
+                    <div className="shrink-0 mx-auto max-w-full rounded-xl bg-neutral-400 h-[114px] w-[478px] max-md:mt-10" />
+                  </div>
+                </div>
+              </div>
+              <button className="justify-center items-center px-16 py-9 mt-28 ml-24 max-w-full text-5xl font-bold tracking-wide text-black bg-yellow-400 rounded-xl w-[478px] max-md:px-5 max-md:mt-10 max-md:text-4xl">
+                View Report
+              </button>
+            </div>
+          </div>
+          <Calendar />
+          <div className="flex flex-col ml-5 w-[27%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col mt-20 text-5xl font-bold tracking-wide text-black whitespace-nowrap max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+              <div className="items-start self-end px-12 pt-16 pb-9 max-w-full rounded-xl bg-neutral-400 w-[142px] max-md:px-5 max-md:text-4xl">
+                ....
+              </div>
+              <button className="justify-center items-center px-16 py-10 mt-28 bg-yellow-400 rounded-xl max-md:px-5 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+                Refresh
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Calendar() {
+  const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const dates = Array.from({ length: 30 }, (_, i) => i + 1);
+
+  return (
+    <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col grow pt-4 pb-12 w-full tracking-wide bg-yellow-600 rounded-2xl shadow-sm max-md:max-w-full">
+        <div className="flex flex-col px-6 max-md:px-5 max-md:max-w-full">
+          <div className="flex gap-5 w-full max-md:flex-wrap max-md:max-w-full">
+            <div className="flex flex-auto gap-px">
+              <div className="flex flex-col items-start text-xs leading-3 text-center whitespace-nowrap text-slate-600">
+                <IconImage
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/13205113ddbf3be86d59c08431c49a62491e9cbf59fb3a24494dd86762468518?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+                  alt="Previous month icon"
+                  className="w-6 aspect-square"
+                />
+                <div className="flex gap-5 justify-between mt-7 ml-4 max-md:ml-2.5">
+                  {weekdays.slice(0, 3).map((day) => (
+                    <div key={day}>{day}</div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col self-start mt-1">
+                <div className="text-xl font-medium leading-3 text-black">
+                  April 2024
+                </div>
+                <div className="flex gap-5 justify-between self-end mt-7 max-w-full text-xs leading-3 text-center whitespace-nowrap text-slate-600 w-[150px]">
+                  {weekdays.slice(3, 6).map((day) => (
+                    <div key={day}>{day}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col text-xs leading-3 text-center whitespace-nowrap text-slate-600">
+              <IconImage
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0d3065b02d11412c4892f78e5117fe306116c9f2c8733f5a32c84675c9c6feb?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+                alt="Next month icon"
+                className="self-center w-6 aspect-square"
+              />
+              <div className="mt-7">{weekdays[6]}</div>
+            </div>
+          </div>
+          <div className="flex gap-5 justify-between self-end mt-11 max-w-full text-xs leading-3 text-center text-black whitespace-nowrap w-[136px] max-md:mt-10">
+            {dates.slice(0, 3).map((date) => (
+              <div key={date}>{date}</div>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col px-6 mt-16 text-xs leading-3 text-center text-black whitespace-nowrap max-md:px-5 max-md:mt-10 max-md:max-w-full">
+          <div className="flex gap-5 justify-between max-md:flex-wrap max-md:max-w-full">
+            {dates.slice(3, 10).map((date) => (
+              <div key={date}>{date}</div>
+            ))}
+          </div>
+          <div className="flex gap-5 justify-between mt-16 max-md:flex-wrap max-md:pr-5 max-md:mt-10 max-md:max-w-full">
+            {dates.slice(10, 17).map((date) => (
+              <div key={date}>{date}</div>
+            ))}
+          </div>
+          <div className="flex gap-5 justify-between mt-14 max-md:flex-wrap max-md:pr-5 max-md:mt-10 max-md:max-w-full">
+            {dates.slice(17, 24).map((date) => (
+              <div key={date}>{date}</div>
+            ))}
+          </div>
+          <div className="flex gap-5 justify-between mt-14 ml-6 max-w-full w-[338px] max-md:mt-10 max-md:ml-2.5">
+            {dates.slice(24).map((date) => (
+              <div key={date}>{date}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CallLogReportPage() {
+  return (
+    <div className="flex flex-col justify-center">
+      <div className="pr-7 w-full bg-black max-md:pr-5 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <Sidebar />
+          <CallLogReport />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default CallLogReportPage;

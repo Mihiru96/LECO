@@ -1,0 +1,86 @@
+import * as React from "react";
+
+const ProfileButton = () => (
+  <div className="flex gap-5 px-6 py-1.5 mt-8 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc1e3b18d6dd12913b3d92a22cfa2310da47095d006ff64ba1926c9fdf408516?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Profile icon" className="shrink-0 aspect-square w-[62px]" />
+    <div className="flex-auto my-auto">Profile</div>
+  </div>
+);
+
+const ComplainButton = () => (
+  <div className="flex gap-5 px-5 py-2.5 mt-16 whitespace-nowrap bg-yellow-500 rounded-xl max-md:flex-wrap max-md:mt-10">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc8e8ab5b0312bf6151b38417f45b63b3b228fc7629619ced294cbb832517bc5?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Complain icon" className="shrink-0 aspect-square w-[54px]" />
+    <div className="flex-auto self-start mt-3.5">Complain</div>
+  </div>
+);
+
+const DailySetupButton = () => (
+  <div className="flex gap-5 px-6 py-1 mt-16 bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5 max-md:mt-10">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5dde3c531da91752f725d8b0b688f5da3d2e64d1a436defae41549e2c13799b?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Daily setup icon" className="shrink-0 w-10 aspect-[0.61]" />
+    <div className="flex-auto self-start mt-5">Daily Setup</div>
+  </div>
+);
+
+const ReportsButton = () => (
+  <div className="flex gap-5 px-6 py-1 mt-16 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5 max-md:mt-10">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e00bedfb7608267248896186020cacac83db228431de12704c3bdece7982ba9?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Reports icon" className="shrink-0 aspect-[0.7] w-[46px]" />
+    <div className="flex-auto my-auto">Reports</div>
+  </div>
+);
+
+const LogoutButton = () => (
+  <div className="flex gap-5 px-6 py-0.5 mt-36 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5 max-md:mt-10">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbf43f9242e732872e2e826d339d4c76e890f845ed7d882a3d7fe8c057f0f01d?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Logout icon" className="shrink-0 aspect-[0.67] w-[46px]" />
+    <div className="flex-auto my-auto">Logout</div>
+  </div>
+);
+
+function Dashboard() {
+  return (
+    <div className="flex flex-col justify-center">
+      <div className="pr-16 w-full bg-black max-md:pr-5 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <aside className="flex flex-col w-[28%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col grow items-start pt-1.5 pb-16 pl-11 w-full text-4xl font-bold text-black bg-white max-md:mt-10 max-md:max-w-full">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3fce8b780edd8c7a830e86cc37af23ab8bc1b0f47b815c15049585961d4786e1?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Logo" className="self-center max-w-full aspect-[0.47] w-[151px]" />
+              <ProfileButton />
+              <ComplainButton />
+              <DailySetupButton />
+              <ReportsButton />
+              <LogoutButton />
+            </div>
+          </aside>
+          <main className="flex flex-col ml-5 w-[72%] max-md:ml-0 max-md:w-full">
+            <div className="flex overflow-hidden relative flex-col self-stretch pt-20 my-auto rounded-3xl min-h-[1041px] max-md:mt-10 max-md:max-w-full">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f985d27a8b4c370cf801d50e7e532d59fcafad081da6f35106dc581d8b45f45?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="" className="object-cover absolute inset-0 size-full" />
+              <div className="relative shrink-0 rounded-none bg-neutral-400 h-[84px] mt-[877px] max-md:mt-10 max-md:max-w-full" />
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+import * as React from "react";
+
+function BreakdownAddedSuccessMessage() {
+  return (
+    <div className="flex flex-col items-center px-11 py-8 font-medium text-center bg-white rounded-2xl shadow-sm max-w-[641px] max-md:px-5">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c30ac651ab365665079accf4e97261326382acd401bf714aefd71187e4046cc?apiKey=4fa02c003aa649cea4b2bd794a579f45&"
+        alt="Breakdown Added Successfully"
+        className="w-12 aspect-square"
+      />
+      <h2 className="self-stretch mt-10 text-4xl text-slate-800 max-md:max-w-full">
+        Breakdown Added Successfully
+      </h2>
+      <button className="mt-20 text-4xl text-yellow-400 max-md:mt-10">
+        Ok
+      </button>
+    </div>
+  );
+}
+
+export default BreakdownAddedSuccessMessage;

@@ -1,0 +1,144 @@
+import * as React from "react";
+
+function ProfileIcon() {
+  return <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc1e3b18d6dd12913b3d92a22cfa2310da47095d006ff64ba1926c9fdf408516?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Profile icon" className="shrink-0 aspect-square w-[62px]" />;
+}
+
+function ComplainIcon() {
+  return <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc8e8ab5b0312bf6151b38417f45b63b3b228fc7629619ced294cbb832517bc5?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Complain icon" className="shrink-0 aspect-square w-[54px]" />;
+}
+
+function DailySetupIcon() {
+  return <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5dde3c531da91752f725d8b0b688f5da3d2e64d1a436defae41549e2c13799b?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Daily setup icon" className="shrink-0 w-10 aspect-[0.61]" />;
+}
+
+function ReportsIcon() {
+  return <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e00bedfb7608267248896186020cacac83db228431de12704c3bdece7982ba9?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Reports icon" className="shrink-0 aspect-[0.7] w-[46px]" />;
+}
+
+function LogoutIcon() {
+  return <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbf43f9242e732872e2e826d339d4c76e890f845ed7d882a3d7fe8c057f0f01d?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Logout icon" className="shrink-0 aspect-[0.67] w-[46px]" />;
+}
+
+function MenuItem({ icon, label }) {
+  return (
+    <div className="flex gap-5 px-6 py-1.5 whitespace-nowrap bg-yellow-400 rounded-xl max-md:flex-wrap max-md:px-5">
+      {icon}
+      <div className="flex-auto my-auto">{label}</div>
+    </div>
+  );
+}
+
+function Sidebar() {
+  return (
+    <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col grow items-start pt-1.5 pb-16 pl-11 w-full text-4xl font-bold text-black bg-white max-md:mt-10 max-md:max-w-full">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3fce8b780edd8c7a830e86cc37af23ab8bc1b0f47b815c15049585961d4786e1?apiKey=4fa02c003aa649cea4b2bd794a579f45&" alt="Logo" className="self-center max-w-full aspect-[0.47] w-[151px]" />
+        <MenuItem icon={<ProfileIcon />} label="Profile" className="mt-8" />
+        <MenuItem icon={<ComplainIcon />} label="Complain" className="mt-16 bg-yellow-500 py-2.5 max-md:mt-10" />
+        <MenuItem icon={<DailySetupIcon />} label="Daily Setup" className="mt-16 max-md:mt-10" />
+        <MenuItem icon={<ReportsIcon />} label="Reports" className="mt-16 max-md:mt-10" />
+        <MenuItem icon={<LogoutIcon />} label="Logout" className="mt-36 py-0.5 max-md:mt-10" />
+      </div>
+    </div>
+  );
+}
+
+function JobAlertHeader() {
+  return (
+    <header className="z-10 justify-center items-start px-12 py-2.5 mt-0 text-6xl bg-white rounded-3xl max-md:px-5 max-md:max-w-full max-md:text-4xl">
+      Job Alert
+    </header>
+  );
+}
+
+function JobAlertActions() {
+  return (
+    <div className="flex flex-col self-start mt-4 ml-12 text-blue-700 max-md:ml-2.5">
+      <div>Refresh</div>
+      <div className="mt-7">
+        Unattended (<span className="text-blue-700">0</span>)
+      </div>
+    </div>
+  );
+}
+
+function JobAlertTable({ title, count }) {
+  return (
+    <div className="flex flex-col pb-20 bg-white max-md:max-w-full">
+      <div className="flex gap-5 items-start pr-2 pl-12 mb-20 w-full bg-neutral-400 max-md:flex-wrap max-md:pl-5 max-md:mb-10 max-md:max-w-full">
+        <div className="my-auto">No</div>
+        <div className="flex flex-auto gap-3 self-start">
+          <div className="shrink-0 w-px bg-black border border-black border-solid h-[34px]" />
+          <div>Log Date</div>
+          <div className="flex gap-1 self-start">
+            <div className="shrink-0 w-px bg-black border border-black border-solid h-[33px]" />
+            <div className="flex-auto">Assign..</div>
+            <div>Log B.</div>
+          </div>
+        </div>
+      </div>
+      <div className="self-start mt-5 ml-7 text-blue-700 max-md:ml-2.5">
+        {title} (<span className="text-blue-700">{count}</span>)
+      </div>
+    </div>
+  );
+}
+
+function JobAlertContent() {
+  return (
+    <main className="flex flex-col pb-16 mt-14 w-full text-3xl font-bold text-black rounded-3xl bg-zinc-300 max-md:mt-10 max-md:max-w-full">
+      <JobAlertHeader />
+      <JobAlertActions />
+      <JobAlertTable title="In Progress" count={0} />
+    </main>
+  );
+}
+
+function JobAlertPage() {
+  return (
+    <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+      <JobAlertContent />
+    </div>
+  );
+}
+
+function DashboardPage() {
+  return (
+    <div className="flex flex-col justify-center">
+      <div className="pr-20 w-full bg-black max-md:pr-5 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <Sidebar />
+          <JobAlertPage />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default DashboardPage;
+import * as React from "react";
+
+const ComplainButton = ({ children }) => (
+  <button className="justify-center px-5 py-7 mt-10 bg-yellow-400 rounded-3xl text-4xl md:mt-40 md:px-9 md:py-7 md:text-6xl">
+    {children}
+  </button>
+);
+
+const complainData = [
+  { text: "Add Complain" },
+  { text: "Modify Complain" },
+  { text: "Ignore Complain" },
+];
+
+function ComplainSection() {
+  return (
+    <section className="flex justify-center items-center px-5 py-20 text-4xl font-bold tracking-wide text-black bg-white rounded-[50px] md:px-16 md:py-20 md:text-6xl md:max-w-[736px]">
+      <div className="flex flex-col mt-10 w-full md:mt-11 md:max-w-[535px]">
+        {complainData.map((item, index) => (
+          <ComplainButton key={index}>{item.text}</ComplainButton>
+        ))}
+      </div>
+    </section>
+  );
+}

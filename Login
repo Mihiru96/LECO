@@ -1,0 +1,25 @@
+import * as React from "react";
+
+function HeroImage({ src, alt }) {
+  return (
+    <img
+      loading="lazy"
+      src={src}
+      alt={alt}
+      className="w-full aspect-[1.67] max-md:max-w-full"
+    />
+  );
+}
+
+function HeroSection() {
+  return (
+    <section className="flex flex-col justify-center bg-white">
+      <HeroImage
+        src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
+        alt="Beautiful landscape"
+      />
+    </section>
+  );
+}
+
+export default HeroSection;
